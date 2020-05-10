@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@master
@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'linebotgithub'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_11c02af7ca634522a51c3daaa6527ea1 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5add8f9247e1478aad6abd4e81706d3b }}
         package: ${{env.DOTNET_ROOT}}/myapp 
